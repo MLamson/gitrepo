@@ -5,7 +5,7 @@
 
 // Custom Styles
 body {
-  background: #fafafa;
+  background: white;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #333;
 }
@@ -13,44 +13,91 @@ body {
 
 .container{
   @include outer-container;
-  background-color:grey;
+  background-color:white;
 }//.container close brace
 
 header{
   @include span-columns(12);
-  height: 150px;
-  background-color:blue;
+  height: 50px;
+  background-color:HSLA(0, 0%, 96%, 1);
 }
 
 .leftHeader{
   @include span-columns(8);
   height: 100px;
-  background-color:violet;
+  background-color:HSLA(0, 0%, 96%, 1);
+  padding-top: 12px;
+
   img{
     width:28px;
+    float:left;
   }
-}
+
+  input{
+    width:350px;
+    padding-top: 6px;
+  }
+  .searchText{
+    float:left;
+    margin-left: 5px;
+
+  }//end .searchText
+  .explore{
+    float:left;
+    padding-left: 10px;
+    text-decoration: none;
+    color:HSLA(0, 0%, 20%, 1);
+    font-size: 14px;
+    padding-top: 6px;
+  }//end .explore
+  .gist{
+    float: left;
+    padding-left: 10px;
+    text-decoration: none;
+    color:HSLA(0, 0%, 20%, 1);
+    font-size: 14px;
+    padding-top: 6px;
+
+  }//end .gist
+  .blog{
+    float: left;
+    padding-left: 10px;
+    text-decoration: none;
+    color:HSLA(0, 0%, 20%, 1);
+    font-size: 14px;
+    padding-top: 6px;
+  }//end .blog
+  .help{
+    float: left;
+    padding-left: 10px;
+    text-decoration: none;
+    color:HSLA(0, 0%, 20%, 1);
+    font-size: 14px;
+    padding-top: 6px; 
+  }//end .help
+}//end .leftHeader
 
 .rightHeader{
   @include span-columns(4);
   height: 100px;
-  background-color:grey;
+  background-color:HSLA(0, 0%, 96%, 1);
 }
 .sideBar{
   @include span-columns(3);
   height: 800px;
-  background-color:green;
-
+  background-color:white;
+  padding-top: 20px;
   img{
     width:230px;
     border-radius: 6px;
   }
 }//sideBar end brace
-
+.joinedOnDate img{
+  width:10px;
+}
 .mainSection{
   @include span-columns(9);
   background-color:orange;
-  height:600px;
 }
 
 .tabBar{
@@ -66,13 +113,23 @@ header{
 }
 .innerMain{
   @include span-columns(12);
-  background-color:pink;
-  height: 500px;
-}
+  background-color:HSLA(0, 0%, 100%, 1);
+  .nameLink a{
+    color:HSLA(210, 53%, 51%, 1);
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+    }//.nameLink close
+  .descriptColor{
+    color:black;
+  }//.descriptColor close
+  .borderLine{
+    width:100%;
+    height: 1px;
+    background-color:lightgrey;
 
-.sideBar{
-
-}
+  }
+}//.innerMain close
 
 footer{
   @include span-columns(12);

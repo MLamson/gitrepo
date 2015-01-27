@@ -24,15 +24,34 @@
 
   <div class="container">
 
-  <header>Header
+  <header>
   <div class="leftHeader">
     <a href="https://github.com/"><img src="../images/GitHub-Mark-64px.png"></a>
+    <form class="searchText">  
+      <input type="text" id="input_area" placeholder="Search GitHub">
+    </form>
+    <a class="explore" href="tps://github.com/explore">Explore<a>
+    <a class="gist" href="https://gist.github.com/">Gist<a>
+    <a class="blog" href="https://github.com/blog">Blog<a>
+    <a class="help" href="https://help.github.com/">Help</a>
 
   </div><!--leftHeader close brace-->
   <div class="rightHeader"></div>
  </header>
 
     <div class="sideBar">
+        <script type="text/template" id="userTemplate">
+        <div class="userSidebar">
+            <%=userAvatar%> 
+            <span><%=userName%></span><br/>
+            <span><%=userLogin%></span><br/>
+            <span class="joinedOnDate"><img src="#">Joined on <%=joinedDate%></span>
+            
+        </div>
+
+    
+      </script>   <!--end of template attempt-->
+
 
 
     </div>
@@ -40,21 +59,23 @@
 
 
     <div class="mainSection">
-      <div class="tabBar">bar with tabs</div>
+      <div class="tabBar">bar with tabs
+
+      </div>
       <div class="searchBar">bar with search</div>
-      <div class="innerMain">inner main
-
-
-
-          <!--beggining of template att-->
+      <div class="innerMain">
+<!--beggining of template att-->
 
       <script type="text/template" id="repoTemplate">
-        <li class="item">
-            <%= repoLink %>
-        </li>
-        <li>
-            // <%= descript %>
-        </li>
+        <div class="item">
+            <span class="nameLink"><%= repoLink %></span>
+            <span class="descriptColor"><%= descript %></span><br/>
+            <span><%= repoUser %></span><br/>
+            <time><%= lastUpdated %></time>
+            <div class="borderLine"></div>
+        </div>
+
+    
       </script>   <!--end of template attempt-->
 
 
