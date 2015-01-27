@@ -2,6 +2,7 @@
 @import '../../bower_components/bourbon/dist/bourbon';
 @import '../../bower_components/neat/app/assets/stylesheets/neat';
 
+
 // Custom Styles
 body {
   background: #fafafa;
@@ -9,18 +10,81 @@ body {
   color: #333;
 }
 
-.hero-unit {
-  margin: 50px auto 0 auto;
-  width: 600px;
-  font-size: 18px;
-  font-weight: 200;
-  line-height: 30px;
-  background-color: #eee;
-  border-radius: 6px;
-  padding: 60px;
-  h1 {
-    font-size: 60px;
-    line-height: 1;
-    letter-spacing: -1px;
+
+.container{
+  @include outer-container;
+  background-color:grey;
+}//.container close brace
+
+header{
+  @include span-columns(12);
+  height: 150px;
+  background-color:blue;
+}
+
+.leftHeader{
+  @include span-columns(8);
+  height: 100px;
+  background-color:violet;
+  img{
+    width:28px;
   }
 }
+
+.rightHeader{
+  @include span-columns(4);
+  height: 100px;
+  background-color:grey;
+}
+.sideBar{
+  @include span-columns(3);
+  height: 800px;
+  background-color:green;
+
+  img{
+    width:230px;
+    border-radius: 6px;
+  }
+}//sideBar end brace
+
+.mainSection{
+  @include span-columns(9);
+  background-color:orange;
+  height:600px;
+}
+
+.tabBar{
+  @include span-columns(12);
+  height: 100px;
+  background-color:red;
+}
+
+.searchBar{
+  @include span-columns(12);
+  height: 100px;
+  background-color:yellow;
+}
+.innerMain{
+  @include span-columns(12);
+  background-color:pink;
+  height: 500px;
+}
+
+.sideBar{
+
+}
+
+footer{
+  @include span-columns(12);
+  height: 100px;
+  background-color:purple;
+}
+
+
+
+
+
+
+
+
+

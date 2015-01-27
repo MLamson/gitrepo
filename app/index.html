@@ -20,19 +20,63 @@
   </head>
   <body>
 
-    <div class="hero-unit">
-      <h1>'Allo, 'Allo!</h1>
-      <p>You now have</p>
-      <ul>
-        <li>HTML5 Boilerplate</li>
-        <li>Normalize CSS</li>
-        <li>Sass</li>
+ 
 
-        <li>Bourbon & Neat</li>
-        <li>UnderscoreJS</li>
-      </ul>
-      <p>Don't forget to update your readme file!!</p>
+  <div class="container">
+
+  <header>Header
+  <div class="leftHeader">
+    <a href="https://github.com/"><img src="../images/GitHub-Mark-64px.png"></a>
+
+  </div><!--leftHeader close brace-->
+  <div class="rightHeader"></div>
+ </header>
+
+    <div class="sideBar">
+
+
     </div>
+
+
+
+    <div class="mainSection">
+      <div class="tabBar">bar with tabs</div>
+      <div class="searchBar">bar with search</div>
+      <div class="innerMain">inner main
+
+
+
+          <!--beggining of template att-->
+
+      <script type="text/template" id="repoTemplate">
+        <li class="item">
+            <%= repoLink %>
+        </li>
+        <li>
+            // <%= descript %>
+        </li>
+      </script>   <!--end of template attempt-->
+
+
+ 
+
+
+
+
+
+
+      </div>
+
+      </div><!--main section close brace-->
+      
+
+  </div><!--container close brace-->
+
+<footer>This is the footer</footer>
+
+
+
+   
 
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
@@ -40,7 +84,8 @@
     <script src="../bower_components/underscore/underscore.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
-
+        <script src="scripts/repoAPI.js"></script>
+        <script src="scripts/userAPI.js"></script>
         <!-- build:js scripts/main.js -->
         <script src="scripts/main.js"></script>
         <!-- endbuild -->
