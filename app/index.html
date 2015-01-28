@@ -64,13 +64,36 @@
 
     <div class="mainSection">
 
-    <div class="tabBar"></div> 
+    <div class="tabBar">
+      <ul>
+        <li>Contributions</li>
+        <li>Repositories</li>
+        <li>Public activity</li>
+      </ul>
+      <form action="https://github.com/settings/profile">
+         <input class="editProfile" type="submit" value="Edit profile">
+      </form>
+    </div> 
+
+
       <div class="searchBar">
 
-        <form class="searchText">  
-      <input type="text" id="input_area" placeholder="Search GitHub">
-    </form>
+        <form class="searchRepo">  
+          <input type="text" id="input_area" placeholder="Search GitHub">
+          <input class="button" type="submit" value="Search">
+        </form>
 
+        <ul class="repoFilter">
+          <li>All</li>
+          <li>Public</li>
+          <li>Private</li>
+          <li>Sources</li>
+          <li>Forks</li>
+          <li>Mirrors</li>
+        </ul>
+        <form  action="https://github.com/new">
+         <input class="create" type="submit" value="New">
+         </form>
 
       </div><!--tabBar close brace-->
 
@@ -80,8 +103,8 @@
       <script type="text/template" id="repoTemplate">
         <div class="item">
             <span class="nameLink"><%= repoLink %></span>
-            <span class="descriptColor"><%= descript %></span><br/>
-            <time><%= lastUpdated %></time>
+            <div class="descriptColor"><%= descript %></div>
+            <div class="lastUp"><time><%= lastUpdated %></time></div>
             <div class="borderLine"></div>
         </div>
 

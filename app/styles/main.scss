@@ -128,14 +128,55 @@ font-weight:800;
   height: 60px;
   border-top:1px solid lightgrey;
   border-bottom:1px solid lightgrey;
+  text-align: middle;
 }
 
 
 .tabBar{
   @include span-columns(12);
-  height: 100px;
+  height: 55px;
   background-color:white;
+}//end .tabBar
+.tabBar ul{
+  float:left;
 }
+.tabBar ul li{
+  float: left;
+  list-style: none;
+  padding-left:30px;
+}
+.editProfile{
+  float: left;
+  margin-left: 175px;
+  margin-top: 9px;
+  height: 36px;
+
+}
+.searchRepo{
+  float:left;
+  padding-top: 17px;
+}
+.repoFilter li:first-child{
+ padding-left: 38px;
+}
+.repoFilter li{
+  float:left;
+  list-style:none;
+  padding-left:15px;
+  padding-top: 4px;
+}
+
+.create{
+  margin-left: 17px;
+  line-height: 33px;
+  margin-top: -6px;
+  background-color: HSLA(105, 57%, 57%, 1);
+  color: white;
+  border-color: HSLA(104, 44%, 46%, 1);
+}
+
+
+
 .item{
   padding-top:30px;
 }
@@ -151,7 +192,12 @@ font-weight:800;
     }//.nameLink close
   .descriptColor{
     color:black;
+    font-size: 15px;
+    padding-top: 10px;
   }//.descriptColor close
+  .lastUp{
+    padding-top:10px;
+  }
   .borderLine{
     width:100%;
     height: 1px;
