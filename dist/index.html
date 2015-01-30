@@ -1,0 +1,135 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>gitrepo</title>
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <link rel="stylesheet" href="styles/vendor.css">
+
+    <link rel="stylesheet" href="styles/main.css">
+
+  </head>
+  <body>
+
+ 
+
+  <div class="container">
+
+  <header>
+  <div class="leftHeader">
+    <a href="https://github.com/"><img src="../images/GitHub-Mark-64px.png"></a>
+    <form class="searchText">  
+      <input type="text" id="input_area" placeholder="Search GitHub">
+    </form>
+    <a class="explore" href="tps://github.com/explore">Explore<a>
+    <a class="gist" href="https://gist.github.com/">Gist<a>
+    <a class="blog" href="https://github.com/blog">Blog<a>
+    <a class="help" href="https://help.github.com/">Help</a>
+
+  </div><!--leftHeader close brace-->
+  <div class="rightHeader"></div>
+ </header>
+
+    <div class="sideBar">
+        <script type="text/template" id="userTemplate">
+        <div class="userSidebar">
+            <%=userAvatar%> 
+            <span class="nameFull"><%=userName%></span>
+            <span class="userLoginName"><%=userLogin%></span><br/>
+            <span class="joinedOnDate"><img src="../images/GitHub-Mark-32px">Joined on <%=joinedDate%></span>
+
+            <div class="follow"><span><%=numFollower%></span><a href="<%=followURL%>">Follower</a></div>
+            <div class="starred"><span><%=starredNumber%></span><a href="<%=starredURL%>">Starred</a></div>
+            <div class="following"><a href="<%=followingURL%>">Following</a></div>
+            <span class="orgListTitle">Organizations</span>
+        </div>
+
+    
+      </script>   <!--end of template attempt-->
+
+
+
+    </div>
+
+
+
+    <div class="mainSection">
+
+    <div class="tabBar">
+      <ul>
+        <li>Contributions</li>
+        <li>Repositories</li>
+        <li>Public activity</li>
+      </ul>
+      <form action="https://github.com/settings/profile">
+         <input class="editProfile" type="submit" value="Edit profile">
+      </form>
+    </div> 
+
+
+      <div class="searchBar">
+
+        <form class="searchRepo">  
+          <input type="text" id="input_area" placeholder="Search GitHub">
+          <input class="button" type="submit" value="Search">
+        </form>
+
+        <ul class="repoFilter">
+          <li>All</li>
+          <li>Public</li>
+          <li>Private</li>
+          <li>Sources</li>
+          <li>Forks</li>
+          <li>Mirrors</li>
+        </ul>
+        <form  action="https://github.com/new">
+         <input class="create" type="submit" value="New">
+         </form>
+
+      </div><!--tabBar close brace-->
+
+      <div class="innerMain">
+<!--beggining of template att-->
+
+      <script type="text/template" id="repoTemplate">
+        <div class="item">
+            <span class="nameLink"><%= repoLink %></span>
+            <div class="descriptColor"><%= descript %></div>
+            <div class="lastUp"><time><%= lastUpdated %></time></div>
+            <div class="borderLine"></div>
+        </div>
+
+    
+      </script>   <!--end of template attempt-->
+
+
+ 
+
+
+
+
+
+
+      </div>
+
+      </div><!--main section close brace-->
+      
+
+  </div><!--container close brace-->
+
+<footer>This is the footer</footer>
+
+
+
+   
+
+    <script src="scripts/vendor.js"></script>
+        <script src="scripts/starredAPI.js"></script>
+        <script src="scripts/repoAPI.js"></script>
+        <script src="scripts/userAPI.js"></script>
+        <script src="scripts/main.js"></script>
+</body>
+</html>
