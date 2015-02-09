@@ -1,3 +1,5 @@
-## Yo, I'm a Readme
+## copy of GitHub page using data from API(not live).
 
-You should probably update me so people looking at your code have an idea what it is being used for :)
+gh-pages
+
+Used Sass, underscore, jquery, and neat.
